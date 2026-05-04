@@ -1,0 +1,31 @@
+# --- Compilados e Dependências ---
+# Se usar Java (Maven/Gradle)
+target/
+build/
+.gradle/
+bin/
+
+# Se usar Node.js (Frontend ou Backend)
+node_modules/
+dist/
+
+# --- Docker ---
+# Ignorar arquivos de dados do banco de dados (se você mapear volumes locais)
+data/
+mysql_data/
+
+# --- IDEs e Editores ---
+.vscode/
+.idea/
+*.swp
+*.DS_Store
+
+# --- Segredos e Configurações Locais ---
+.env
+.env.local
+application-local.properties
+application-dev.properties
+
+# --- Flyway ---
+# O Flyway às vezes gera arquivos de log ou temporários
+flyway.log
