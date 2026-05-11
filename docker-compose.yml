@@ -1,11 +1,11 @@
 services:
   db:
     image: mysql:8.0
-    container_name: pizzaria_db
+    container_name: food-truck-db
     # Define a senha do root e o nome do banco que será criado ao iniciar
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: pizzaria_db
+      MYSQL_DATABASE: foodtruck_db #substituiso por pizzaria_db por foodtruck_db
     # Mapeia a porta 3306 do seu computador para a 3306 do container
     ports:
       - "3306:3306"

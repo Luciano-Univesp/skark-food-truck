@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Food Truck - Bem-vindo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #0d0d0d; /* Fundo preto/azul escuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Arial Black', sans-serif; /* Fonte robusta */
+        }
+
+        .splash-content {
+            text-align: center;
+            animation: fadeIn 2s ease-out; /* Animação suave */
+        }
+
+        .logo-tubarao {
+            max-width: 60px;
+            margin-bottom: 20px;
+        }
+
+        .nome-empresa {
+            color: white;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* Definição da Animação */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="splash-content">
+        <img th:src="@{/images/logo_shark.png}" alt="Logo Shark Food Truck" class="logo-shark">
+        <div class="nome-empresa">sharkfoodtruck</div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = '/home'; // Redireciona para o página Inicial após 3 segundos
+        }, 3000);
+    </script>
+
+</body>
+</html>

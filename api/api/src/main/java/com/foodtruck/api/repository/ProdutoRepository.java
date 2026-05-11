@@ -1,11 +1,11 @@
-package com.pizzaria.api.repository;
+package com.foodtruck.api.repository;
 
-import com.pizzaria.api.model.Pizza;
+import com.foodtruck.api.model.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PizzaRepository extends JpaRepository<Pizza, Long> {
+public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     // Apenas com essa linha, você já tem métodos como:
     // .findAll(), .save(), .findById(), .deleteById()
 }

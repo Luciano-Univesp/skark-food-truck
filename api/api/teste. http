@@ -1,0 +1,9 @@
+### Criar um novo pedido
+POST http://localhost:8080/pedidos
+Content-Type: application/json
+
+{
+  "clienteNome": "Ana Silva",
+  "endereco": "Rua das Flores, 456",
+  "total": 120.00
+}

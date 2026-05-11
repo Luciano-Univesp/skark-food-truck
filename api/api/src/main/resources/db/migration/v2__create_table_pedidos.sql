@@ -1,0 +1,7 @@
+CREATE TABLE pedidos (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    cliente_nome VARCHAR(100) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    total DECIMAL(10,2) NOT NULL,
+    data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP
+);
