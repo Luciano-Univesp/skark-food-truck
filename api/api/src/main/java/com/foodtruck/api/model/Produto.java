@@ -30,4 +30,7 @@ private Categoria categoria;
     )
     private java.util.List<Ingrediente> ingredientes;       
 
+@OneToOne(mappedBy = "produto", cascade = CascadeType.ALL)
+private Estoque estoque;
+    
 }
