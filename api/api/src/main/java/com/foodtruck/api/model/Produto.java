@@ -17,4 +17,17 @@ public class Produto {
     private String descricao;
     private BigDecimal preco;
     private Boolean disponivel;
+
+    // ... dentro da classe Produto
+@ManyToOne
+@JoinColumn(name = "categoria_id")
+private Categoria categoria;
+
+@ManyToMany
+   @JoinTable(name = "produto_ingrediente",
+             joinColumns = @JoinColumn(name = "produto_id"),
+             inverseJoinColumns = @JoinColumn(name = "ingrediente_id")
+    )
+    private java.util.List<Ingrediente> ingredientes;       
+
 }
