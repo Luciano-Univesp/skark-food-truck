@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDateTime;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "estoque")
@@ -17,6 +18,7 @@ public class Estoque {
 
     @OneToOne
     @JoinColumn(name = "produto_id")
+    @JsonIgnore // Evita referência circular ao serializar o produto    
     private Produto produto;
 
     private Integer quantidadeAtual;
