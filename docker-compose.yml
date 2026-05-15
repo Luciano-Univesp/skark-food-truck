@@ -8,7 +8,7 @@ services:
       MYSQL_DATABASE: foodtruck_db #substituiso por pizzaria_db por foodtruck_db
     # Mapeia a porta 3306 do seu computador para a 3306 do container
     ports:
-      - "3306:3306"
+      - "3307:3306"
     # Cria um volume para que seus dados não sumam quando o container parar
     volumes:
       - mysql_data:/var/lib/mysql
